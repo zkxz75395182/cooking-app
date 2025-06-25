@@ -35,6 +35,7 @@ padding-left: 20rpx;
 }
 
 .post-card {
+  position: relative;
   background-color: #fff;
   border-radius: 20rpx;
   padding: 24rpx;
@@ -92,15 +93,6 @@ padding-left: 20rpx;
   width:40rpx;
   height: 36rpx;
 }
-.post-float-actions {
-  position: absolute;
-  right: 24rpx;
-  bottom: 24rpx;
-  display: flex;
-  flex-direction: row; /* 横向排列 */
-  gap: 24rpx;
-  z-index: 2;
-}
 
 /* 分享按鈕 */
 .share-button {
@@ -123,4 +115,41 @@ padding-left: 20rpx;
 .share-button .share-icon {
   width: 2rpx;
   height: 30rpx;
+}
+.floating-actions {
+  position: fixed;
+  right: 40rpx;
+  bottom: 180rpx; /* 避开tabbar和"我要分享"按钮，可根据实际调整 */
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx; /* 图标间距 */
+  z-index: 200;
+}
+
+.floating-icon {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.08);
+  padding: 8rpx;
+}
+
+.post-float-actions {
+  position: absolute;
+  right: 24rpx;
+  bottom: 24rpx;
+  display: flex;
+  flex-direction: row;
+  gap: 24rpx;
+  z-index: 2;
+}
+
+.float-icon {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.08);
+  padding: 6rpx;
 }

@@ -49,5 +49,36 @@ Page({
 
     }
   })
+Page({
+  data: {
+    recommendList: [
+      { id: 1, name: '家常红烧肉' },
+      { id: 2, name: '清爽蔬菜沙拉' },
+      { id: 3, name: '营养燕麦粥' }
+    ]
+  },
+  goToDetail(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/recipe-detail/recipe-detail?id=${id}`
+    });
+  }
+});
+Page({
+  data: {
+    recipe: null
+  },
+  onLoad(options) {
+    // 这里可以根据 options.id 加载对应菜谱数据
+    // 先用静态数据测试
+    this.setData({
+      recipe: {
+        image: '/images/recipes/fish.jpg',
+        name: '山药玉米排骨汤',
+        // ... 其他字段
+      }
+    });
+  }
+});
  
  

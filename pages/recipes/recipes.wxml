@@ -50,3 +50,6 @@
     </view>
   </view>
 </view>
+<view class="recommend-card" wx:for="{{recommendList}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">
+  <!-- 推荐菜谱内容 -->
+</view>

@@ -21,15 +21,19 @@
         <image class="post-image" wx:if="{{item.image}}" src="{{item.image}}" mode="widthFix"></image>
       </view>
       <!-- 帖子操作 -->
-      <view class="post-actions">
-        <view class="action-button">
-          <image class="action-icon" src="/images/icons/like.png"></image>
-          <text>{{item.like-active.png}}</text>
-        </view>
-        <view class="action-button">
-          <image class="action-icon" src="/images/icons/favorite.png"></image>
-          <text>{{item.favorite-active.png}}</text>
-        </view>
+  
+      <!-- 帖子右下角点赞和收藏 -->
+      <view class="post-float-actions">
+        <image
+          class="float-icon"
+          src="/images/icons/like.png"
+          mode="aspectFit"
+        />
+        <image
+          class="float-icon"
+          src="/images/icons/favorite.png"
+          mode="aspectFit"
+        />
       </view>
     </view>
   </scroll-view>

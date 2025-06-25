@@ -50,7 +50,28 @@ Page({
      */
     onShareAppMessage() {
   
+    },
+  
+ onLikeTap(e) {
+  const id = e.currentTarget.dataset.id;
+  const postList = this.data.postList.map(item => {
+    if (item.id === id) {
+      return Object.assign({}, item, { liked: !item.liked });
     }
+    return item;
+  });
+  this.setData({ postList });
+},
+onFavoriteTap(e) {
+  const id = e.currentTarget.dataset.id;
+  const postList = this.data.postList.map(item => {
+    if (item.id === id) {
+      return Object.assign({}, item, { favorited: !item.favorited });
+    }
+    return item;
+  });
+  this.setData({ postList });
+}
   })
  
  
