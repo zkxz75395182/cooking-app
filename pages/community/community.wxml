@@ -1,0 +1,43 @@
+<!--pages/community/community.wxml-->
+<view class="container">
+  <!-- 頂部搜索框 -->
+  <view class="search-bar">
+    <image class="search-icon" src="/images/icons/search.png" mode="aspectFit"></image>
+    <input class="search-input" placeholder="搜索菜谱、厨友..." placeholder-style="color:#ccc" />
+    <view class="search-btn">搜索</view>
+  </view>
+
+  <!-- 帖子列表 -->
+  <scroll-view class="post-list" scroll-y>
+    <view class="post-card" wx:for="{{postList}}" wx:key="id">
+      <!-- 帖子作者信息 -->
+      <view class="author-info">
+        <image class="author-avatar" src="{{item.authorAvatar}}"></image>
+        <text class="author-name">{{item.authorName}}</text>
+      </view>
+      <!-- 帖子內容 -->
+      <view class="post-content">
+        <text class="post-text">{{item.content}}</text>
+        <image class="post-image" wx:if="{{item.image}}" src="{{item.image}}" mode="widthFix"></image>
+      </view>
+      <!-- 帖子操作 -->
+      <view class="post-actions">
+        <view class="action-button">
+          <image class="action-icon" src="/images/icons/like.png"></image>
+          <text>{{item.likes}}</text>
+        </view>
+        <view class="action-button">
+          <image class="action-icon" src="/images/icons/favorite.png"></image>
+          <text>{{item.favorites}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- "我要分享" 按鈕 -->
+  <view class="share-button">
+    <image class="share-icon" src="/images/icons/plus.png"></image>
+    <text>我要分享</text>
+  </view>
+
+</view>

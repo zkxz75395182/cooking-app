@@ -1,0 +1,90 @@
+/* pages/ai-assistant/ai-assistant.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f7f8fa;
+}
+
+/* 對話記錄 */
+.chat-history {
+  flex: 1;
+  padding: 24rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.message-wrapper {
+  margin-bottom: 40rpx;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 20rpx;
+  max-width: 80%;
+}
+
+.message .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  flex-shrink: 0; /* 防止頭像被壓縮 */
+  background-color: #eee;
+}
+
+.message .content {
+  padding: 20rpx 24rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+/* AI 助手的消息樣式 */
+.ai-message {
+  justify-content: flex-start;
+}
+.ai-message .content {
+  background-color: #ffffff;
+  color: #333;
+  border-top-left-radius: 0;
+}
+
+/* 用戶的消息樣式 */
+.user-message {
+  justify-content: flex-end;
+  margin-left: auto; /* 讓整個消息塊靠右 */
+}
+.user-message .content {
+  background-color: #FFDDAA;
+  color: #5C4B2E;
+  border-top-right-radius: 0;
+}
+
+
+/* 底部輸入區域 */
+.chat-input-area {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e0e0e0;
+}
+
+.chat-input {
+  flex: 1;
+  background-color: #f7f8fa;
+  border-radius: 40rpx;
+  padding: 16rpx 24rpx;
+  font-size: 28rpx;
+}
+
+.send-button {
+  padding: 16rpx 30rpx;
+  font-size: 28rpx;
+  background-color: #FFC94D;
+  color: #5C4B2E;
+  border-radius: 40rpx;
+  margin: 0; /* 清除 button 默認 margin */
+}

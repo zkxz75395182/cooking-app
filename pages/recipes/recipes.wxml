@@ -1,0 +1,52 @@
+<!--pages/recipes/recipes.wxml-->
+<view class="container">
+  <!-- 頂部卡片區域 -->
+  <view class="header-section" style="background-color: #FFC94D;">
+    <view class="main-card">
+      <image class="chef-image" src="/images/hero-chef.jpg" mode="aspectFill"></image>
+      <view class="main-card-content">
+        <view class="main-card-title">每日食光</view>
+        <view class="main-card-subtitle">今天吃什么？交给我！</view>
+        <view class="main-card-members">已为您服务125天</view>
+      </view>
+    </view>
+    <!-- 浮動的功能按鈕卡片 -->
+    <view class="actions-card">
+      <view class="action-item">
+        <image class="action-icon" src="/images/icons/breakfast.png"></image>
+        <text class="action-text">早餐</text>
+      </view>
+      <view class="action-item">
+        <image class="action-icon" src="/images/icons/lunch.png"></image>
+        <text class="action-text">中餐</text>
+      </view>
+      <view class="action-item">
+        <image class="action-icon" src="/images/icons/dinner.png"></image>
+        <text class="action-text">晚餐</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐列表 -->
+  <view class="recommend-section">
+    <view class="recommend-header">
+      <text class="recommend-title">为您推荐</text>
+      <text class="recommend-more">更多</text>
+    </view>
+    <view class="plan-list">
+      <view class="plan-card" wx:for="{{plans}}" wx:key="id">
+        <view class="plan-info">
+          <image class="plan-image" src="{{item.image}}"></image>
+          <view class="plan-text">
+            <view class="plan-title">{{item.title}}</view>
+            <view class="plan-desc">{{item.desc}}</view>
+          </view>
+        </view>
+        <view class="plan-meta">
+          <view class="plan-difficulty">难度：{{item.difficulty}}</view>
+          <view class="plan-time">时间：{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

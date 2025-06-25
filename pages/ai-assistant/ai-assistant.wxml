@@ -1,0 +1,24 @@
+ <!--pages/ai-assistant/ai-assistant.wxml-->
+<view class="container">
+  <!-- 對話記錄區域 -->
+  <scroll-view class="chat-history" scroll-y scroll-into-view="{{lastMessageId}}">
+    <view class="message-wrapper" wx:for="{{chatHistory}}" wx:key="id" id="msg-{{item.id}}">
+      <!-- AI助手的消息 -->
+      <view class="message ai-message" wx:if="{{item.sender === 'ai'}}">
+        <image class="avatar" src="/images/icons/ai-avatar.png"></image>
+        <view class="content">{{item.text}}</view>
+      </view>
+      <!-- 用戶的消息 -->
+      <view class="message user-message" wx:else>
+        <view class="content">{{item.text}}</view>
+        <image class="avatar" src="{{userAvatar}}"></image>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 底部輸入框 -->
+  <view class="chat-input-area">
+    <input class="chat-input" placeholder="请问有什么可以帮您？" value="{{inputValue}}" />
+    <button class="send-button">发送</button>
+  </view>
+</view>

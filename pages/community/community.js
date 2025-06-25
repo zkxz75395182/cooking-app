@@ -1,0 +1,54 @@
+// pages/community/community.js
+Page({
+
+    /**
+     * 頁面的初始數據
+     */
+    data: {
+      postList: [
+        {
+          id: 1,
+          authorName: '爱做饭的王阿姨',
+          authorAvatar: '/images/avatars/user1.jpg',
+          content: '今天做了孩子最爱的红烧肉，肥而不腻，超级下饭！大家看看怎么样？',
+          image: '/images/posts/fish1.jpg', // 臨時使用現有圖片
+          likes: 128,
+          favorites: 34
+        },
+        {
+          id: 2,
+          authorName: '健身达人小张',
+          authorAvatar: '/images/avatars/user2.jpg',
+          content: '周末的健康午餐，自制的鸡胸肉沙拉，低卡又美味。',
+          image: '/images/posts/salad1.jpg',
+          likes: 256,
+          favorites: 88
+        },
+        {
+          id: 3,
+          authorName: '早餐女王',
+          authorAvatar: '/images/avatars/user3.jpg',
+          content: '今天天气不错，做个快手早餐，心情都变好了！十分钟搞定，你们也试试？',
+          image: '/images/posts/oatmeal1.jpg',
+          likes: 99,
+          favorites: 21
+        }
+      ]
+    },
+  
+    /**
+     * 生命周期函数--監聽頁面加載
+     */
+    onLoad(options) {
+  
+    },
+  
+    // 此處省略其他生命周期函數...
+  
+    /**
+     * 用戶點擊右上角分享
+     */
+    onShareAppMessage() {
+  
+    }
+  })

@@ -1,0 +1,41 @@
+ <!--pages/profile/profile.wxml-->
+<view class="container">
+  <!-- 頂部背景和頭像區域 -->
+  <view class="header-section">
+    <image class="header-bg" src="/images/hero-chef.jpg" mode="aspectFill"></image>
+    <view class="profile-info">
+      <image class="avatar" src="/images/avatars/user1.jpg"></image>
+      <text class="nickname">每日食光家</text>
+    </view>
+  </view>
+
+  <!-- 功能列表 -->
+  <view class="menu-list">
+    <view class="menu-item">
+      <image class="menu-icon" src="/images/icons/family.png"></image>
+      <text class="menu-text">家庭成员信息</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item">
+      <image class="menu-icon" src="/images/icons/preferences.png"></image>
+      <text class="menu-text">偏好设置</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item">
+      <image class="menu-icon" src="/images/icons/favorites.png"></image>
+      <text class="menu-text">我的收藏</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item">
+      <image class="menu-icon" src="/images/icons/diet-record.png"></image>
+      <text class="menu-text">往日菜单</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item">
+      <image class="menu-icon" src="/images/icons/settings.png"></image>
+      <text class="menu-text">帐号设置</text>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+</view>
