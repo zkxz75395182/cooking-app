@@ -1,6 +1,6 @@
  Page({
   data: {
-    userAvatar: '/images/avatars/user1.jpg',
+    userAvatar: '/images/avatars/wanayi.jpg',
     inputValue: '',
     lastMessageId: '',
     chatHistory: [

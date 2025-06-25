@@ -17,8 +17,8 @@
   </scroll-view>
 
   <!-- 底部輸入框 -->
-  <view class="chat-input-area">
-    <input class="chat-input" placeholder="请问有什么可以帮您？" value="{{inputValue}}" />
-    <button class="send-button">发送</button>
+  <view class="chat-input-bar">
+    <input class="chat-bar-input" placeholder="請輸入消息..." value="{{inputValue}}" />
+    <button class="chat-bar-send">發送</button>
   </view>
 </view>

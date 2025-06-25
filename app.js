@@ -55,3 +55,5 @@ App({
     wx.setStorageSync('dietRecords', this.globalData.dietRecords);
   }
 }); 
+ 
+ 

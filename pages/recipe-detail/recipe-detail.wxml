@@ -1,114 +1,46 @@
-<view class="container">
-  <!-- 菜譜圖片 -->
-  <view class="recipe-header">
-    <image class="recipe-image" src="{{recipe.image}}" mode="aspectFill"></image>
-    <view class="recipe-overlay">
-      <view class="recipe-title">{{recipe.name}}</view>
-      <view class="recipe-tags">
-        <text class="tag" wx:for="{{recipe.tags}}" wx:key="*this">{{item}}</text>
-      </view>
+<view class="recipe-detail-container">
+  <!-- 菜品图片 -->
+  <image class="recipe-image" src="{{recipe.image}}" mode="aspectFill"></image>
+
+  <!-- 菜名和标签 -->
+  <view class="recipe-title-section">
+    <view class="recipe-title-row">
+      <text class="recipe-title">{{recipe.name}}</text>
+      <text class="recipe-tag">{{recipe.tag}}</text>
+    </view>
+    <view class="recipe-meta-row">
+      <text class="recipe-difficulty">难度：{{recipe.difficulty}}</text>
+      <text class="recipe-suitable">适合：{{recipe.suitable}}</text>
     </view>
   </view>
 
-  <!-- 基本信息 -->
-  <view class="info-section card fade-in">
-    <view class="info-grid">
-      <view class="info-item">
-        <view class="info-icon">⏱️</view>
-        <text class="info-label">烹飪時間</text>
-        <text class="info-value">{{recipe.cookingTime}}</text>
-      </view>
-      <view class="info-item">
-        <view class="info-icon">⭐</view>
-        <text class="info-label">難度</text>
-        <text class="info-value">{{recipe.difficulty}}</text>
-      </view>
-      <view class="info-item">
-        <view class="info-icon">👥</view>
-        <text class="info-label">份量</text>
-        <text class="info-value">{{recipe.servings || '2人份'}}</text>
-      </view>
+  <!-- 菜谱简介 -->
+  <view class="recipe-desc">{{recipe.desc}}</view>
+
+  <!-- 材料列表 -->
+  <view class="section-title">所需材料</view>
+  <view class="ingredients-list">
+    <view class="ingredient-item" wx:for="{{recipe.ingredients}}" wx:key="name">
+      <text class="ingredient-name">{{item.name}}</text>
+      <text class="ingredient-amount">{{item.amount}}</text>
     </view>
   </view>
 
-  <!-- 營養成分 -->
-  <view class="nutrition-section card fade-in">
-    <view class="section-title">
-      <text class="subtitle">營養成分</text>
-      <text class="per-serving">每份</text>
-    </view>
-    <view class="nutrition-grid">
-      <view class="nutrition-item">
-        <text class="nutrition-label">熱量</text>
-        <text class="nutrition-value">{{recipe.nutrition.calories}}kcal</text>
-      </view>
-      <view class="nutrition-item">
-        <text class="nutrition-label">蛋白質</text>
-        <text class="nutrition-value">{{recipe.nutrition.protein}}g</text>
-      </view>
-      <view class="nutrition-item">
-        <text class="nutrition-label">碳水化合物</text>
-        <text class="nutrition-value">{{recipe.nutrition.carbs}}g</text>
-      </view>
-      <view class="nutrition-item">
-        <text class="nutrition-label">脂肪</text>
-        <text class="nutrition-value">{{recipe.nutrition.fat}}g</text>
-      </view>
-      <view class="nutrition-item">
-        <text class="nutrition-label">纖維</text>
-        <text class="nutrition-value">{{recipe.nutrition.fiber}}g</text>
-      </view>
+  <!-- 制作方法 -->
+  <view class="section-title">制作方法</view>
+  <view class="steps-list">
+    <view class="step-item" wx:for="{{recipe.steps}}" wx:key="index">
+      <text class="step-index">{{index + 1}}.</text>
+      <text class="step-desc">{{item}}</text>
     </view>
   </view>
 
-  <!-- 食材 -->
-  <view class="ingredients-section card fade-in">
-    <view class="subtitle">食材</view>
-    <view class="ingredients-list">
-      <view class="ingredient-item" wx:for="{{recipe.ingredients}}" wx:key="*this">
-        <view class="ingredient-dot"></view>
-        <text class="ingredient-text">{{item}}</text>
-      </view>
-    </view>
-  </view>
-
-  <!-- 製作步驟 -->
-  <view class="steps-section card fade-in">
-    <view class="subtitle">製作步驟</view>
-    <view class="steps-list">
-      <view class="step-item" wx:for="{{recipe.steps}}" wx:key="*this">
-        <view class="step-number">{{index + 1}}</view>
-        <view class="step-content">
-          <text class="step-text">{{item}}</text>
-        </view>
-      </view>
-    </view>
-  </view>
-
-  <!-- 小貼士 -->
-  <view class="tips-section card fade-in" wx:if="{{recipe.tips}}">
-    <view class="subtitle">小貼士</view>
-    <view class="tips-content">
-      <text class="tips-text">{{recipe.tips}}</text>
-    </view>
-  </view>
-
-  <!-- 操作按鈕 -->
-  <view class="action-buttons fade-in">
-    <button class="btn-secondary" bindtap="toggleFavorite">
-      {{isFavorite ? '❤️ 已收藏' : '🤍 收藏'}}
-    </button>
-    <button class="btn-primary" bindtap="addToDietRecord">📝 記錄飲食</button>
-  </view>
-
-  <!-- 相關推薦 -->
-  <view class="related-section card fade-in" wx:if="{{relatedRecipes.length > 0}}">
-    <view class="subtitle">相關推薦</view>
-    <view class="related-grid">
-      <view class="related-item" wx:for="{{relatedRecipes}}" wx:key="id" bindtap="goToRecipe" data-id="{{item.id}}">
-        <image class="related-image" src="{{item.image}}" mode="aspectFill"></image>
-        <text class="related-name">{{item.name}}</text>
-      </view>
+  <!-- 营养成分 -->
+  <view class="section-title">营养成分</view>
+  <view class="nutrition-list">
+    <view class="nutrition-item" wx:for="{{recipe.nutrition}}" wx:key="name">
+      <text class="nutrition-name">{{item.name}}</text>
+      <text class="nutrition-value">{{item.value}}</text>
     </view>
   </view>
 </view> 

@@ -3,7 +3,17 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f7f8fa;
+  background: linear-gradient(135deg, #FFF3D1 0%, #FFE6F2 100%);
+  overflow: hidden;
+}
+
+.chat-history {
+  flex: 1;
+  min-height: 0;
+  padding: 24rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 120rpx; /* 避免內容被底部輸入欄遮擋 */
 }
 
 /* 對話記錄 */
@@ -12,6 +22,7 @@
   padding: 24rpx;
   width: 100%;
   box-sizing: border-box;
+
 }
 
 .message-wrapper {
@@ -49,6 +60,10 @@
   color: #333;
   border-top-left-radius: 0;
 }
+.ai-message .avatar {
+  margin-left: 0;
+  margin-right: 12rpx;
+}
 
 /* 用戶的消息樣式 */
 .user-message {
@@ -61,30 +76,55 @@
   border-top-right-radius: 0;
 }
 
+.input-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 12rpx;
+  margin-left: 0;
+}
 
 /* 底部輸入區域 */
-.chat-input-area {
+.chat-input-bar {
   display: flex;
   align-items: center;
-  gap: 20rpx;
-  padding: 20rpx;
-  background-color: #fff;
-  border-top: 1rpx solid #e0e0e0;
+  padding: 12rpx 16rpx 24rpx 16rpx;
+  background: transparent;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 10;
+  box-sizing: border-box;
 }
 
-.chat-input {
+.chat-bar-input {
   flex: 1;
-  background-color: #f7f8fa;
-  border-radius: 40rpx;
-  padding: 16rpx 24rpx;
+  height: 72rpx;
+  background: #fff;
+  border-radius: 36rpx;
+  border: none;
   font-size: 28rpx;
+  padding: 0 28rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+  margin-right: 16rpx;
+  color: #333;
 }
 
-.send-button {
-  padding: 16rpx 30rpx;
+.chat-bar-send {
+  height: 72rpx;
+  min-width: 120rpx;
+  padding: 0 32rpx;
+  background: linear-gradient(90deg, #FFC94D 0%, #FFB6B9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 36rpx;
   font-size: 28rpx;
-  background-color: #FFC94D;
-  color: #5C4B2E;
-  border-radius: 40rpx;
-  margin: 0; /* 清除 button 默認 margin */
+  font-weight: bold;
+  box-shadow: 0 4rpx 16rpx rgba(255,201,77,0.08);
+  transition: background 0.2s;
 }
+
+.chat-bar-send:active {
+  background: linear-gradient(90deg, #FFB6B9 0%, #FFC94D 100%);
+}
+ 

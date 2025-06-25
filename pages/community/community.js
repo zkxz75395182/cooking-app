@@ -9,27 +9,26 @@ Page({
         {
           id: 1,
           authorName: '爱做饭的王阿姨',
-          authorAvatar: '/images/avatars/user1.jpg',
+          authorAvatar: '/images/avatars/wanayi.jpg',
           content: '今天做了孩子最爱的红烧肉，肥而不腻，超级下饭！大家看看怎么样？',
-          image: '/images/posts/fish1.jpg', // 臨時使用現有圖片
-          likes: 128,
-          favorites: 34
+          image: '/images/recipes/hongshaorou.jpg', // 臨時使用現有圖片
+      
         },
         {
           id: 2,
           authorName: '健身达人小张',
-          authorAvatar: '/images/avatars/user2.jpg',
+          authorAvatar: '/images/avatars/user.jpg',
           content: '周末的健康午餐，自制的鸡胸肉沙拉，低卡又美味。',
-          image: '/images/posts/salad1.jpg',
+          image: '/images/posts/shucaishala.jpg',
           likes: 256,
           favorites: 88
         },
         {
           id: 3,
           authorName: '早餐女王',
-          authorAvatar: '/images/avatars/user3.jpg',
+          authorAvatar: '/images/avatars/nvwan.jpg',
           content: '今天天气不错，做个快手早餐，心情都变好了！十分钟搞定，你们也试试？',
-          image: '/images/posts/oatmeal1.jpg',
+          image: '/images/posts/zaocannvwan.jpg',
           likes: 99,
           favorites: 21
         }

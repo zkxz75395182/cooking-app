@@ -26,13 +26,17 @@
       <view class="post-float-actions">
         <image
           class="float-icon"
-          src="/images/icons/like.png"
+          src="{{item.liked ? '/images/icons/like-active.png' : '/images/icons/like.png'}}"
           mode="aspectFit"
+          data-id="{{item.id}}"
+          bindtap="onLikeTap"
         />
         <image
           class="float-icon"
-          src="/images/icons/favorite.png"
+          src="{{item.favorited ? '/images/icons/favorite-active.png' : '/images/icons/favorite.png'}}"
           mode="aspectFit"
+          data-id="{{item.id}}"
+          bindtap="onFavoriteTap"
         />
       </view>
     </view>

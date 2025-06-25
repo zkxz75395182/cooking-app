@@ -4,7 +4,7 @@
   <view class="header-section">
     <image class="header-bg" src="/images/hero-chef.jpg" mode="aspectFill"></image>
     <view class="profile-info">
-      <image class="avatar" src="/images/avatars/user1.jpg"></image>
+      <image class="avatar" src="/images/avatars/wanayi.jpg"></image>
       <text class="nickname">每日食光家</text>
     </view>
   </view>
