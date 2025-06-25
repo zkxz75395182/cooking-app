@@ -23,9 +23,8 @@
 4. 查看菜谱建议、烹饪步骤，或获取营养信息  
 
 ## 项目链接
-- 微信小程序预览地址：[点击访问](https://example.miniapp.com)
-- GitHub 项目仓库：[点击进入](https://github.com/xxx/ai-cooking-assistant)
-
+- 微信小程序预览地址：暂无
+- GitHub 项目仓库：https://github.com/zkxz75395182/cooking-app.git
 ## 智能体设定摘要
 - **角色**：AI厨房助手「小煮灵」  
 - **性格**：俏皮、有趣，像朋友一样聊天，提供实用的厨房建议  
