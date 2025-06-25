@@ -14,7 +14,7 @@ page {
 /* 卡片樣式 */
 .card {
   background: #FFFFFF;
-  border-radius: 20rpx;
+  border-radius: 50rpx;
   box-shadow: 0 4rpx 20rpx rgba(255, 107, 157, 0.1);
   margin-bottom: 20rpx;
   overflow: hidden;
@@ -170,5 +170,6 @@ page {
     font-size: 32rpx;
   }
 } 
+ 
  
  

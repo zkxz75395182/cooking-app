@@ -1,24 +1,20 @@
- <!--pages/ai-assistant/ai-assistant.wxml-->
-<view class="container">
-  <!-- 對話記錄區域 -->
-  <scroll-view class="chat-history" scroll-y scroll-into-view="{{lastMessageId}}">
-    <view class="message-wrapper" wx:for="{{chatHistory}}" wx:key="id" id="msg-{{item.id}}">
-      <!-- AI助手的消息 -->
-      <view class="message ai-message" wx:if="{{item.sender === 'ai'}}">
-        <image class="avatar" src="/images/icons/ai-avatar.png"></image>
-        <view class="content">{{item.text}}</view>
-      </view>
-      <!-- 用戶的消息 -->
-      <view class="message user-message" wx:else>
-        <view class="content">{{item.text}}</view>
-        <image class="avatar" src="{{userAvatar}}"></image>
+<view class="chat-container">
+  <scroll-view scroll-y="true" class="chat-list" scroll-with-animation>
+  <block wx:for="{{messages}}" wx:key="index">
+    <view class="chat-row {{item.role}}">
+      <image wx:if="{{item.role === 'ai'}}" class="avatar" src="/images/icons/ai-avatar.png" />
+      <view class="chat-bubble {{item.role}}">
+        <text class="bubble-text">{{item.content}}</text>
       </view>
     </view>
-  </scroll-view>
+  </block>
+</scroll-view>
 
-  <!-- 底部輸入框 -->
+
   <view class="chat-input-bar">
-    <input class="chat-bar-input" placeholder="請輸入消息..." value="{{inputValue}}" />
-    <button class="chat-bar-send">發送</button>
+    <input class="chat-bar-input" placeholder="输入消息内容..." bindinput="onInput" value="{{inputValue}}" />
+    <view class="chat-bar-send" bindtap="sendMessage">
+      <text class="yellow-ellipse-text">发送</text>
+    </view>
   </view>
 </view>

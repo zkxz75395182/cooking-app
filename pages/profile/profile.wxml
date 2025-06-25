@@ -6,6 +6,7 @@
     <view class="profile-info">
       <image class="avatar" src="/images/avatars/wanayi.jpg"></image>
       <text class="nickname">每日食光家</text>
+      <text class="profile-subinfo">年齡：28  性別：女</text>
     </view>
   </view>
 

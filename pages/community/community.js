@@ -17,7 +17,7 @@ Page({
         {
           id: 2,
           authorName: '健身达人小张',
-          authorAvatar: '/images/avatars/user.jpg',
+          authorAvatar: '/images/avatars/wanayi.jpg',
           content: '周末的健康午餐，自制的鸡胸肉沙拉，低卡又美味。',
           image: '/images/posts/shucaishala.jpg',
           likes: 256,
@@ -26,7 +26,7 @@ Page({
         {
           id: 3,
           authorName: '早餐女王',
-          authorAvatar: '/images/avatars/nvwan.jpg',
+          authorAvatar: '/images/avatars/wanayi.jpg',
           content: '今天天气不错，做个快手早餐，心情都变好了！十分钟搞定，你们也试试？',
           image: '/images/posts/zaocannvwan.jpg',
           likes: 99,
