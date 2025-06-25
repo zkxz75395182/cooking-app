@@ -24,20 +24,20 @@
       <view class="post-actions">
         <view class="action-button">
           <image class="action-icon" src="/images/icons/like.png"></image>
-          <text>{{item.likes}}</text>
+          <text>{{item.like-active.png}}</text>
         </view>
         <view class="action-button">
           <image class="action-icon" src="/images/icons/favorite.png"></image>
-          <text>{{item.favorites}}</text>
+          <text>{{item.favorite-active.png}}</text>
         </view>
       </view>
     </view>
   </scroll-view>
 
-  <!-- "我要分享" 按鈕 -->
+  <!-- "分享" 按钮，移到 scroll-view 外部 -->
   <view class="share-button">
     <image class="share-icon" src="/images/icons/plus.png"></image>
-    <text>我要分享</text>
+    <text>分享</text>
   </view>
 
 </view>
